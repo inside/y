@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+import { assertEquals } from "./deps.ts";
 import map from "../map.ts";
 
 Deno.test("should double each list item", () => {
