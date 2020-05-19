@@ -1,5 +1,5 @@
-const filter = (list, fn) => {
-  const result = [];
+const filter = <T>(list: Array<T>, fn: (item: T) => boolean): Array<T> => {
+  const result: T[] = [];
 
   for (let i = 0; i < list.length; i++) {
     if (fn(list[i])) {
@@ -10,5 +10,4 @@ const filter = (list, fn) => {
   return result;
 };
 
-const a = [23, 12, 34, 45, 43];
-console.log(filter(a, (x) => x >= 25));
+export default filter;
