@@ -1,4 +1,8 @@
-const reduce = (list, fn, initialValue) => {
+const reduce = <T>(
+  list: Array<T>,
+  fn: (acc: any, item: T, index: number, list: Array<T>) => any,
+  initialValue: any,
+) => {
   let acc = initialValue !== undefined ? initialValue : list[0];
 
   for (var i = 0; i < list.length; i++) {
@@ -8,8 +12,4 @@ const reduce = (list, fn, initialValue) => {
   return acc;
 };
 
-const sum = reduce([1, 2, 3], (acc, curr, index, arr) => {
-  return acc + curr;
-}, 0);
-
-console.log("sum: ", sum);
+export default reduce;
