@@ -9,7 +9,7 @@ Deno.test("should return only items satifying the predicate", () => {
 
 Deno.test("should return all items", () => {
   const a = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024];
-  const b = filter(a, (x) => x >=1);
+  const b = filter(a, (x) => x >= 1);
   assertEquals(b, a);
 });
 

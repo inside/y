@@ -11,4 +11,4 @@ const map = <T>(
   return result;
 };
 
-export default map
+export default map;
